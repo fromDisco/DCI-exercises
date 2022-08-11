@@ -127,6 +127,6 @@ def only_by_7(start, end):
 
     for i in range(start, end + 1):
         # x % 1 == 0 checks if num is an int, not a float
-        if (i / 7) % 1 == 0 and not (i / 5) % 1 == 0:
+        if (i/7) % 1 == 0 and not (i/5) % 1 == 0:
             print(i) 
 
