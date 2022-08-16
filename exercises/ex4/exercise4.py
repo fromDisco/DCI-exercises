@@ -67,18 +67,36 @@ def user_input():
     comparison(number1, number2)
 
 
-user_input()
+# user_input()
 
+# Task 2
+month_list = {
+    "January": 31,
+    "February": 28,
+    "March": 31,
+    "April": 30,
+    "Mai": 31,
+    "June": 30,
+    "July": 31,
+    "August": 31,
+    "September": 30,
+    "October": 31,
+    "November": 30,
+    "December": 31
+}
 
 def days_in_month(month):
     print(month)
     
 
 def user_month(month_list):
-    print(month_list)    
+    print(", ".join(month_list.keys()))
+    
+user_month(month_list)
 
 
-month_list = {
-    "January": 31,
-    "February": 28,
-}
+
+
+
+
+
