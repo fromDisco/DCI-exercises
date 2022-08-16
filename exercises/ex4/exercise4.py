@@ -49,7 +49,6 @@ def comparison(num1, num2):
         print(f"{num1} is even.")
     elif num2_even:
         print(f"{num2} is even.")
-        
 
     if not(num1_even):
         print(f"{num1} is odd")
@@ -68,6 +67,7 @@ def user_input():
 
 
 # user_input()
+
 
 # Task 2
 print("--- TASK 2 ---")
