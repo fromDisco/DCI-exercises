@@ -49,7 +49,6 @@ def comparison(num1, num2):
         print(f"{num1} is even.")
     elif num2_even:
         print(f"{num2} is even.")
-        
 
     if not(num1_even):
         print(f"{num1} is odd")
@@ -69,13 +68,16 @@ def user_input():
 
 # user_input()
 
+
 # Task 2
+print("--- TASK 2 ---")
+
 month_list = {
     "January": 31,
     "February": 28,
     "March": 31,
     "April": 30,
-    "Mai": 31,
+    "May": 31,
     "June": 30,
     "July": 31,
     "August": 31,
@@ -85,16 +87,27 @@ month_list = {
     "December": 31
 }
 
-def days_in_month(month):
-    print(month)
-    
+def days_in_month(m_list):
+    """get user input and try to find it in dictionary"""
+
+    month = input("Enter month: ").capitalize() # if user doesn't capitalize
+    try:
+        output = m_list[month] # if user inputs an unknown month
+    except:
+        print("Sorry, month not known, try again.")
+        return days_in_month(m_list) # recursion, (important) pass result back to stack
+    else: # else is excecuted if try succeeds
+        return month + ": " + str(output)
+        
 
 def user_month(month_list):
-    print(", ".join(month_list.keys()))
+    """print out List of month_list keys"""
+
+    return "\n".join(month_list.keys())
     
-user_month(month_list)
 
-
+print(user_month(month_list))
+print(days_in_month(month_list))
 
 
 
