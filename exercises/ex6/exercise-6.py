@@ -29,6 +29,11 @@ while n <  n+ number:
 print("Sum =", sum)
 
 # Task 4
+# 4.1
+for a in range(3):
+    print(a)
+
+# 
 x = 10
 while x > 0:
     print(x)
