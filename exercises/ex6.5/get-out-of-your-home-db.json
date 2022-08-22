@@ -1,0 +1,60 @@
+{
+    "story": "GET READY (feat. ADD/ADHD) \n------------------------------------------------------ \nYou somehow forgot the time and now its only 20 minutes, \nbefore you have to leave the house. \nYou are planning to meet up with some friends, \nbut because you are virtually ready to go, there is no need to hurry.",
+    "sleeping-room": {
+        "description": "You are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home, or perhaps in the next few days.",
+        "look-around": {
+            "laundry basket": {
+                "look into": {
+                    "some shirts": {
+                        "smell": "recently the weather was pretty hot. the smell sweaty."
+                    },
+                    "underwear": {
+                        "smell": "really?"
+                    },
+                    "your grey pullover": {
+                        "check if you can wear it today": "sorry, no."
+                    },
+                    "your trowsers from yesterday": {
+                        "search": {
+                            "your keys": {
+                                "take": "take('keys')"
+                            }
+                        }
+                    }
+                }
+            },
+            "closet": {
+                "look into": {
+                    "jacket": {
+                        "take": "Its too warm for that."
+                    },
+                    "trowsers": {
+                        "take": "You already are dressed."
+                    }
+                }
+            },
+            "your messy bed": {
+                "Making your bed": [
+                    "You made your bed. Wich is good. But it took 3 mins.",
+                    "time(-3)]"
+                ],
+                "door to living room": "leave_room('living-room')"
+            }
+        }
+    },
+    "living-room": {
+        "description": "You are in your living room. \n20 Minutes left. Normally to early to leave. \nBut not enough time to start a new task. \nYour laptop is still running. \nShould you check for the bus connection again?",
+        "look-around": {
+            "your rucksack": {
+                "take": "No need for that."
+            },
+            "your computer": {
+                "shut down": "Perfect, you didn't waste any time.",
+                "check for bus connection": [
+                    "A new video on youtube from a channel you really like. \nOh, no. 12 Minutes are gone! Where has the time gone.",
+                    "time(-12)"
+                ]
+            }
+        }
+    }
+}
