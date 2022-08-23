@@ -4,22 +4,18 @@
         "description": "You are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home, or perhaps in the next few days.",
         "look-around": {
             "laundry basket": {
-                "look into": {
-                    "some shirts": {
-                        "smell": "recently the weather was pretty hot. the smell sweaty."
-                    },
-                    "underwear": {
-                        "smell": "really?"
-                    },
-                    "your grey pullover": {
-                        "check if you can wear it today": "sorry, no."
-                    },
-                    "your trowsers from yesterday": {
-                        "search": {
-                            "your keys": {
-                                "take": "take('keys')"
-                            }
-                        }
+                "some shirts": {
+                    "smell": "recently the weather was pretty hot. the smell sweaty."
+                },
+                "underwear": {
+                    "smell": "really?"
+                },
+                "your grey pullover": {
+                    "check if you can wear it today": "sorry, no."
+                },
+                "yesterdays trowsers": {
+                    "your keys": {
+                        "take": "take(in_your_pocket, 'keys')"
                     }
                 }
             },

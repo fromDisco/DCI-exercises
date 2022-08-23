@@ -71,7 +71,6 @@ print(odd_or_even(10))
 
 # Task 4
 print("--- Task 4 ---")
-from distutils.command.install_egg_info import to_filename
 from math import pi 
 
 
@@ -130,5 +129,17 @@ def temp_input():
     return temperatur, scale
 
 
-user_temps = temp_input()
-print(celsius_fahrenheit(*user_temps))
+# user_temps = temp_input()
+# print(celsius_fahrenheit(*user_temps))
+
+
+# Task 7
+print("--- Task 7 ---")
+
+
+def print_pattern():
+    top = "*", "*"*2, "*"*3
+    return top
+    
+
+print(print_pattern())
