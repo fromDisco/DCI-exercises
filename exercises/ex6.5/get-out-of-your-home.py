@@ -1,9 +1,13 @@
 import json
 import os
-import colorama
+from colorama import init, Fore, Back
 import art
+import platform
+
 # expecting that working directory is ony 3 folders above file
 os.chdir("exercises/ex6.5")
+# init colorama, reset Color after every line
+init(autoreset=True)
 
 
 def open_database(database):
@@ -41,6 +45,7 @@ def room_loop(story, room, remaining_time, in_your_pocket, left_house):
             in_your_pocket: list (updated?) of picked up objects 
             left_house: bool, can only be set to True in hallway (room)
     '''
+    clearscreen()
     # stepping into a new room, display description
     print(story[room]["description"])
     # actual list of possible actions
@@ -72,7 +77,7 @@ def room_loop(story, room, remaining_time, in_your_pocket, left_house):
         else:
             story_room_objects = story_room_objects[user_action]
             actual_path.append(user_action)
-            print("Your actual position: \n" + " -> ".join(actual_path))
+            print("Your actual position: " + " -> ".join(actual_path))
 
         print("possible actions:")
         print("\n".join(actions))
@@ -91,7 +96,11 @@ def start_game():
         Run room_seletor() for the first time
     '''
     story = open_database("get-out-of-your-home-db.json")
-    print(story["story"])
+    clearscreen()
+    print(Fore.LIGHTRED_EX + story["story"]["headline"])
+    print(Fore.LIGHTCYAN_EX + story["story"]["subline"])
+    print(Fore.LIGHTGREEN_EX + story["story"]["text"])
+    input("\nHit ENTER to start the game")
     # all other arguments are optional at first.
     # If in game, the default arguments would srew up the progress
     room_selector(story)
@@ -152,12 +161,15 @@ def change_json(story_json, element):
 
 
 def clearscreen():
-    '''check the OS and clear the terminal screen'''
-    if platform == "linux" or platform == "linux2":
+    '''
+    check the OS and clear the terminal screen
+    '''
+    if platform.system().lower() == "linux" or platform.system().lower() == "linux2":
+        print("BLAHBLABASSDFE")
         os.system('clear')
-    elif platform == "darwin":
+    elif platform.system().lower() == "darwin":
         os.system('clear')
-    elif platform == "win32":
+    elif platform.system().lower() == "win32":
         os.system('cls')
 
 

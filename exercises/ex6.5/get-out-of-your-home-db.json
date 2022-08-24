@@ -1,7 +1,11 @@
 {
-    "story": "GET READY (feat. ADD/ADHD) \n------------------------------------------------------ \nYou somehow forgot the time and now its only 20 minutes, \nbefore you have to leave the house. \nYou are planning to meet up with some friends, \nbut because you are virtually ready to go, there is no need to hurry.",
+    "story": {
+        "headline": "GET READY (feat. ADD/ADHD)",
+        "subline": "------------------------------------------------------",
+        "text": "You somehow forgot the time and now its only 20 minutes, \nbefore you have to leave the house. \nYou are planning to meet up with some friends, \nbut because you are virtually ready to go, there is no need to hurry."
+    },
     "sleeping-room": {
-        "description": "You are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home, or perhaps in the next few days.",
+        "description": "\nYou are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home. ... Or perhaps in the next few days. \nWait, didn't you think about this last week?\n\nYou look around and you see the following things you can interact with. \nName them to interact.",
         "look-around": {
             "laundry basket": {
                 "some shirts": {
