@@ -35,6 +35,12 @@
                     "time(-3)]"
                 ],
                 "door to living room": "leave_room('living-room')"
+            },
+            "living-room": {
+                "leave-room": "living-room"
+            },
+            "hallway": {
+                "leave-room": "hallway"
             }
         }
     },
