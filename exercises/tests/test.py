@@ -5,8 +5,12 @@ def repl(num_str):
             binary = binary.replace(str(i), "0")
         else:
             binary = binary.replace(str(i), "1")
-        
+
     return binary
 
 
 print(repl("2839838934701432"))
+
+
+intake = input("Break me: ")
+print(intake)

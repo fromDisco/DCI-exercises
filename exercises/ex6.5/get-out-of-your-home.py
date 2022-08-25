@@ -165,7 +165,6 @@ def clearscreen():
     check the OS and clear the terminal screen
     '''
     if platform.system().lower() == "linux" or platform.system().lower() == "linux2":
-        print("BLAHBLABASSDFE")
         os.system('clear')
     elif platform.system().lower() == "darwin":
         os.system('clear')
