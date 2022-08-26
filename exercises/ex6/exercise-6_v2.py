@@ -11,3 +11,16 @@ output = given_string[124] + given_string[2] + \
     given_string[46] * 2 + given_string[5] + " " + given_string[18:24]
 print(len("One morning, when Gregor Samsa woke from troubl"))
 print(output)
+
+
+hello = "hello"
+container = ""
+
+for letter in hello:
+    while letter in given_string:
+        print(letter)
+        letter = container + letter
+        container = letter
+        break
+
+print(container)

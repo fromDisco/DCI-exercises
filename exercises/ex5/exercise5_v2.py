@@ -5,7 +5,7 @@ def inator(word):
     if vowels.find(word[-1]) != -1:
         return word + "-inator " + str(length)
     else:
-        return word + "intator " + str(length)
+        return word + "inator " + str(length)
 
 
 print(inator("Shrink"))

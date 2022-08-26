@@ -8,25 +8,38 @@
         "description": "\nYou are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home. ... Or perhaps in the next few days. \nWait, didn't you think about this last week?\n\nYou look around and you see the following things you can interact with. \nName them to interact.",
         "look-around": {
             "laundry basket": {
+                "story": "You are digging deep into a pile of worn clothes.",
+                "function": "time(-1)",
                 "some shirts": {
-                    "smell": "recently the weather was pretty hot. the smell sweaty."
+                    "smell": "recently the weather was pretty hot. the smell sweaty.",
+                    "function": "time(-0.5)"
                 },
                 "underwear": {
-                    "smell": "really?"
+                    "story": "They look still clean. Smell if they are still good?",
+                    "smell": "really?",
+                    "function": "time(-0.5)"
                 },
-                "your grey pullover": {
-                    "check if you can wear it today": "sorry, no."
+                "grey pullover": {
+                    "check if you can wear it today": "Sorry, no.",
+                    "function": "time(-0.5)"
+                },
+                "black hoody": {
+                    "check if you can wear it today": "Sorry, no.",
+                    "function": "time(-0.5)"
                 },
                 "yesterdays trowsers": {
                     "your keys": {
-                        "take": "take(in_your_pocket, 'keys')"
+                        "take": "take(in_your_pocket, 'keys')",
+                        "function": "time(-0.5)"
                     }
                 }
             },
             "closet": {
                 "look into": {
+                    "function": "time(-1)",
                     "jacket": {
-                        "take": "Its too warm for that."
+                        "take": "Its too warm for that.",
+                        "function": "time(-0.5)"
                     },
                     "trowsers": {
                         "take": "You already are dressed."
@@ -36,7 +49,7 @@
             "your messy bed": {
                 "Making your bed": [
                     "You made your bed. Wich is good. But it took 3 mins.",
-                    "time(-3)]"
+                    "time(-3)"
                 ],
                 "door to living room": "leave_room('living-room')"
             },
