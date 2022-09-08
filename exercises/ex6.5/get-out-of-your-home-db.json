@@ -2,62 +2,61 @@
     "story": {
         "headline": "GET READY (feat. ADD/ADHD)",
         "subline": "------------------------------------------------------",
-        "text": "You somehow forgot the time and now its only 20 minutes, \nbefore you have to leave the house. \nYou are planning to meet up with some friends, \nbut because you are virtually ready to go, there is no need to hurry."
+        "text": "I somehow forgot the time and now its only 20 minutes, \nbefore I have to leave the house. \nI are planning to meet up with some friends, \nbut because I am virtually ready to go, there is no need to hurry."
     },
     "sleeping-room": {
         "description": "\nYou are standing in your sleeping room. \nIt's a littlebit messy. You plan to tidy up, as soon, \nas you come back home. ... Or perhaps in the next few days. \nWait, didn't you think about this last week?\n\nYou look around and you see the following things you can interact with. \nName them to interact.",
         "look-around": {
             "laundry basket": {
                 "story": "You are digging deep into a pile of worn clothes.",
-                "function": "time(-1)",
+                "time": "time(-1)",
                 "some shirts": {
                     "smell": "recently the weather was pretty hot. the smell sweaty.",
-                    "function": "time(-0.5)"
+                    "time": "time(-0.5)"
                 },
                 "underwear": {
                     "story": "They look still clean. Smell if they are still good?",
                     "smell": "really?",
-                    "function": "time(-0.5)"
+                    "time": "time(-0.5)"
                 },
                 "grey pullover": {
-                    "check if you can wear it today": "Sorry, no.",
-                    "function": "time(-0.5)"
+                    "wear it": "Sorry, no.",
+                    "time": "time(-0.5)"
                 },
                 "black hoody": {
-                    "check if you can wear it today": "Sorry, no.",
-                    "function": "time(-0.5)"
+                    "wear it": "Sorry, no.",
+                    "time": "time(-0.5)"
                 },
                 "yesterdays trowsers": {
+                    "story": "Hm, there seems to be something in the pockets.",
                     "your keys": {
                         "take": "take(in_your_pocket, 'keys')",
-                        "function": "time(-0.5)"
+                        "time": "time(-0.5)"
                     }
                 }
             },
             "closet": {
                 "look into": {
-                    "function": "time(-1)",
+                    "story": "Hm, not much in here. You start to tidy up the empty closet. You have to wash soon.",
+                    "time": "time(-1)",
                     "jacket": {
                         "take": "Its too warm for that.",
-                        "function": "time(-0.5)"
+                        "time": "time(-0.5)"
                     },
                     "trowsers": {
-                        "take": "You already are dressed."
+                        "take": "You already are dressed.",
+                        "time": "time(-0.5)"
                     }
                 }
             },
             "your messy bed": {
-                "Making your bed": [
-                    "You made your bed. Wich is good. But it took 3 mins.",
-                    "time(-3)"
-                ],
-                "door to living room": "leave_room('living-room')"
+                "Making your bed": {
+                    "story": "You made your bed. Wich is good. But it took 2 mins. They are good invested. Rooms looks much better now. What a difference a small change makes.",
+                    "time": "time(-2)"
+                }
             },
             "living-room": {
                 "leave-room": "living-room"
-            },
-            "hallway": {
-                "leave-room": "hallway"
             }
         }
     },
@@ -69,10 +68,70 @@
             },
             "your computer": {
                 "shut down": "Perfect, you didn't waste any time.",
-                "check for bus connection": [
-                    "A new video on youtube from a channel you really like. \nOh, no. 12 Minutes are gone! Where has the time gone.",
-                    "time(-12)"
-                ]
+                "check for bus connection": {
+                    "story": "A new video on youtube from a channel you really like. \nOh, no. 12 Minutes are gone! Where has the time gone.",
+                    "time": "time(-12)"
+                }
+            },
+            "book shelf": {
+                "story": "You seriously should read some of the books, that are in here. Otherwise you could sell them. But wait, what is my wallet lying here.",
+                "time": "time(-0.5)",
+                "take": "take(in_your_pocket, 'wallet')"
+            },
+            "couch": {
+                "story": "Looks so comfy. Should i sit down for a second?",
+                "sitdown": {
+                    "story": "Hm, so snuggly.",
+                    "time": "time(-5)"
+                }
+            },
+            "hallway": {
+                "leave-room": "hallway",
+                "time": "time(-0.5)"
+            },
+            "sleeping-room": {
+                "leave-room": "sleeping-room",
+                "time": "time(-0.5)"
+            }
+        }
+    },
+    "hallway": {
+        "story": "You are standing in your small hallway. The appartment door is just one step way. You could leave now.",
+        "look-around": {
+            "shoe rack": {
+                "story": "Wich shoes, shall i wear today? Doesn't really matter, does it?", 
+                "put-on": "put-on(your_clothes, 'shoes')",
+                "time": "time(-1)"
+            },
+            "key board": {
+                "story": "looks-empty",
+                "time": "time(-0.5)"
+            },
+            "kitchen": {
+                "leave-room": "kitchen",
+                "time": "time(-0.5)"
+            },
+            "living-room": {
+                "leave-room": "living-room",
+                "time": "time(-0.5)"
+            },
+            "appartment door": {
+                "leave-house": "leave-house",
+                "time": "time(-0.5)"
+            }
+        }
+    },
+    "kitchen": {
+        "story": "There are some leftovers from your delicous lunch. You're getting hungry.",
+        "look-around": {
+            "tasty leftovers": {
+                "consume": "consume('leftovers')"
+            },
+            "dirty dishes": {
+                "story": "I won't defenitly not clean these now."
+            },
+            "bottle of water": {
+                "if-eaten": "consume('water')"
             }
         }
     }

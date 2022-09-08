@@ -1,9 +1,12 @@
 import re
+# TODO: try regex
 
 
-def replace_dog(string):
-    return string.replace(" dog ", " cat ")
+def replace_dog(string, old, new):
     return string.replace(old, new)
 
 
-print(replace_dog("A dogmatic dog buys dogecoin to become rich and buy hotdogs every day."))
+sentence = "A dogmatic dog buys dogecoin to become rich and buy hotdogs every day."
+old = " dog "
+new = " cat "
+print(replace_dog(sentence, old, new))
