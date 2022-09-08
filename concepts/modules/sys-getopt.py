@@ -25,3 +25,6 @@ def get_start_and_end_dates():
 
 
 # get_start_and_end_dates()
+
+import sys
+print(sys.argv)

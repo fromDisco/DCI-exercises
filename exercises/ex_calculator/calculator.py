@@ -3,10 +3,10 @@ import sys
 
 def parse():
     # is called if input comes from the command line
+    # waste, input1, input2, input3 = sys.argv
     input1 = sys.argv[1]
     input2 = sys.argv[2]
     input3 = sys.argv[3]
-
     return input1, input2, input3
 
 
