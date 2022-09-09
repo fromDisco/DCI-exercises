@@ -8,4 +8,6 @@ parser.add_argument("-d", "--drag", dest='arg2', help="This is the second argume
 
 # Parse and print the results
 args = parser.parse_args()
-print(args.d)
+# jls_extract_var = jls_extract_var
+# print(args.jls_extract_var)
+print(args)
