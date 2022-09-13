@@ -1,7 +1,6 @@
 import re
 import os
 
-
 document = """Hey Mr. Bezos,
 
 I hope its okay I message you in this unsecure email program. Sry about that!
@@ -50,10 +49,9 @@ def main():
             adresses = read_adress(file_content)
             parse_result(adresses)
 
-
-    # adresses = read_adress(document)
-    # print("Here we go:")
-    # parse_result(adresses)
+    adresses = read_adress(document)
+    print("Here we go:")
+    parse_result(adresses)
 
 
 main()
