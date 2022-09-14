@@ -1,3 +1,6 @@
+import re
+
+
 # Create a function that takes a string input as a number and replaces leading and trailing zeros.
 # 
 # ## Input/Output:
@@ -7,9 +10,14 @@
 
 def deleteTrailing(txt):
     print(txt)
+    pattern = r"(?P<lead>^0+)|(?:\.\d*[1-9])(?P<trail>0+$)"
+    in_groups = re.finditer(pattern, txt)
+    for i in in_groups:
+        print(i)
+
     
 
-txt1 = "0023.07623070"
+txt1 = "0023.0762307000"
 txt2 = "hello world"
 txt3 = "01230"
-print(deleteTrailing(txt))
+print(deleteTrailing(txt1))
