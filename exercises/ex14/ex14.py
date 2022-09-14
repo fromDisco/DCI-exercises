@@ -12,4 +12,5 @@ def deleteTrailing(txt):
 txt1 = "0023.07623070"
 txt2 = "hello world"
 txt3 = "01230"
+
 print(deleteTrailing(txt))
