@@ -9,6 +9,7 @@ def task1(daychange):
     print("# datetime.datetime.now():")
     print(datetime_now)
 
+    # just datetime.timedelta() gives back the object of da
     datetime_timetravel = datetime_now + datetime.timedelta(days = daychange)
     print("# datetime_timetravel:")
     print(datetime_timetravel)
@@ -29,16 +30,17 @@ print("\n------ Task3 ------")
 
 
 def task3(act_year):
+    # get actual payday of every month in the year
     for i in range(1, 13):
 
         payday_object = datetime.datetime(act_year, month = i, day = 25)
         
-        date_format = "%d %B %Y"
+        date_format = "%A, %d %B %Y"
         payday = payday_object.strftime(date_format)
 
-        message = f"Hello , your rent of 30.000 Euros is due on {payday}!"
+        message = f"Hello Bambam, your rent of 30.000 Euros is due on {payday}!"
         print(message)
 
 
-chosen_year = 2022
+chosen_year = 1978
 print(task3(chosen_year))
