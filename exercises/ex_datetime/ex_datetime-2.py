@@ -32,13 +32,12 @@ print("\n------ Task3 ------")
 def task3(act_year):
     # get actual payday of every month in the year
     for i in range(1, 13):
-
         payday_object = datetime.datetime(act_year, month = i, day = 25)
         
         date_format = "%A, %d %B %Y"
         payday = payday_object.strftime(date_format)
 
-        message = f"Hello Bambam, your rent of 30.000 Euros is due on {payday}!"
+        message = f"Hello Bambam, your rent of 30.000 Euros is due on {payday} * 2!"
         print(message)
 
 
