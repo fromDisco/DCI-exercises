@@ -20,4 +20,9 @@ def deleteTrailing(txt):
 txt1 = "0023.0762307000"
 txt2 = "hello world"
 txt3 = "01230"
+<<<<<<< HEAD
 print(deleteTrailing(txt1))
+=======
+
+print(deleteTrailing(txt))
+>>>>>>> 1ad15bb (moved files)
