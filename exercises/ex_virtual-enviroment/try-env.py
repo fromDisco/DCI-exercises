@@ -4,6 +4,5 @@ from colorama import *
 
 for i in range(8):
     # art1 = art("random")
-    tprint("Fly Butterfly", "random")
+    tprint("Fly Butterfly, fly.", "random")
     aprint("butterfly")
-
