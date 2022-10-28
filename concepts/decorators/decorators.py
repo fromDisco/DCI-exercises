@@ -1,11 +1,14 @@
 import inspect
 
+def deco(func):
+    def inner(word):
+        return func(word) * 2
 
-def greeting():
-    return "Hey"
+    return inner
+
+@deco
+def greeting(word):
+    return word
 
 
-no = greeting
-
-print(greeting)
-print(inspect.getsource(greeting))
+print(greeting("Hello"))
