@@ -17,6 +17,7 @@ Tanisha"""
 
 def search_file():
     txt_files = []
+
     dir_path = os.path.dirname(os.path.realpath(__file__))
     folder_content = os.listdir(dir_path)
     txt_pattern = r"[a-zA-Z0-9]+.txt"
